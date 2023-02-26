@@ -1,0 +1,51 @@
+.chessboard {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  border-radius: 25px;
+}
+
+.chessboard > .chessboard-square {
+  width: calc(500px / 8);
+  height: calc(500px / 8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chessboard > .chessboard-square[role="white"] {
+  background: white;
+}
+
+.chessboard > .chessboard-square[role="black"] {
+  background: black;
+}
+
+.chessboard > .chessboard-square:nth-child(1) {
+  border-top-left-radius: 25px;
+}
+
+.chessboard > .chessboard-square:nth-child(8) {
+  border-top-right-radius: 25px;
+}
+
+.chessboard > .chessboard-square:nth-child(57) {
+  border-bottom-left-radius: 25px;
+}
+
+.chessboard > .chessboard-square:nth-child(64) {
+  border-bottom-right-radius: 25px;
+}
+
+@media (max-width: 40rem) {
+  .chessboard {
+    width: 95vw;
+    height: 95vw;
+  }
+
+  .chessboard > .chessboard-square {
+    width: calc(95vw / 8);
+    height: calc(95vw / 8);
+  }
+}

@@ -1,0 +1,10 @@
+img.chessboard-piece {
+  width: 50px;
+  height: auto;
+}
+
+@media (max-width: 40rem) {
+  img.chessboard-piece {
+    width: calc(95vw / 8);
+  }
+}

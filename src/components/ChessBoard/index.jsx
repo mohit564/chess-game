@@ -1,7 +1,12 @@
 import React from "react";
 
+// styles
 import "./ChessBoard.css";
 
+// components
+import ChessBoardPiece from "../ChessBoardPiece";
+
+// helpers
 import { xAxis, yAxis } from "../../constants";
 import { setRole } from "../../utils/chessboard";
 
@@ -14,7 +19,9 @@ const ChessBoard = () => {
             className="chessboard-square"
             role={setRole(row, columnIdx)}
             data-position={`${column}${row}`}
-          />
+          >
+            <ChessBoardPiece row={row} column={column} />
+          </div>
         ));
       })}
     </div>

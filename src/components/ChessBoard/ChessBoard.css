@@ -38,6 +38,14 @@
   border-bottom-right-radius: 25px;
 }
 
+.chessboard > .chessboard-square:hover {
+  cursor: pointer;
+}
+
+.chessboard > .chessboard-square.possible-move {
+  background: #bada55;
+}
+
 @media (max-width: 40rem) {
   .chessboard {
     width: 95vw;

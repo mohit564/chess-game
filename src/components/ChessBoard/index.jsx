@@ -16,6 +16,7 @@ const ChessBoard = () => {
       {yAxis.map((row) => {
         return xAxis.map((column, columnIdx) => (
           <div
+            key={`${column}${row}`}
             className="chessboard-square"
             role={setRole(row, columnIdx)}
             data-position={`${column}${row}`}
